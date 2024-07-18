@@ -20960,5 +20960,10 @@ a.text-primary-hover:hover, button.text-primary-hover:hover {
   display: none !important;
 }
 
-/*User CSS*/
-/*# sourceMappingURL=style.css.map */
+.typed {
+  color: #F89F33;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.59s ease-in-out;
+  font-size: 54px;
+}

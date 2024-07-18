@@ -138,7 +138,7 @@
                         <a class="nav-link" href="#">Blog</a>
                     </li>
 					<li class="nav-item">
-						<a class="btn" href="tel:909400410"
+						<a class="btn" href="tel:9097400410"
 							style="background-color: #F89F33; color: white; padding: 10px 20px; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; transition: background-color 0.3s ease;"
 							onmouseover="this.style.backgroundColor='#e87a00';"
 							onmouseout="this.style.backgroundColor='#F89F33';">
@@ -197,8 +197,10 @@ Main Banner START -->
 					<!-- Title -->
 <h1 class="mt-3 lh-base">One-Stop Solution For
     <span class="cd-headline clip big-clip is-full-width text-primary mb-0 d-block d-xxl-inline-block">
-        <span class="typed" data-type-text="AC Installation and Repair, Appliance Repair and Service, HVAC & Electrical Solutions, HVAC AMC" style="color:#F89F33"></span>
-    </span>
+		<span class="typeed">
+			
+		</span>
+	</span>
 </h1>
 
 
@@ -1042,7 +1044,43 @@ CTA END -->
 
 	<!-- Theme Functions -->
 	<script src="assets/js/functions.js"></script>
+	
+  <script>
+        const texts = [
+            "AC Installation and Repair",
+            "Appliance Repair and Service",
+            "HVAC & Electrical Solutions",
+            "HVAC AMC"
+        ];
+        const typedElement = document.querySelector('.typeed');
+        let currentIndex = 0;
+        let charIndex = 0;
+        let currentText = '';
+        let typingInterval;
 
+        function typeText() {
+            if (charIndex < texts[currentIndex].length) {
+                currentText += texts[currentIndex].charAt(charIndex);
+                typedElement.textContent = currentText;
+                charIndex++;
+            } else {
+                clearInterval(typingInterval);
+                setTimeout(() => {
+                    typedElement.style.opacity = 0; // Fade out
+                    setTimeout(() => {
+                        charIndex = 0;
+                        currentText = '';
+                        currentIndex = (currentIndex + 1) % texts.length;
+                        typedElement.textContent = '';
+                        typedElement.style.opacity = 1; // Fade in
+                        typingInterval = setInterval(typeText, 100); // Restart typing
+                    }, 1000); // Wait for fade out to complete
+                }, 1000); // Wait before starting fade out
+            }
+        }
+
+        typingInterval = setInterval(typeText, 100); // Start typing
+    </script>
 	</body>
 
 	<!-- Mirrored from mizzle.webestica.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 May 2024 07:02:24 GMT -->
