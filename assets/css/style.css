@@ -19564,6 +19564,7 @@ section {
 
 @media (max-width: 1199.98px) {
   section {
+    padding-left: 10px;
     padding-top: 5rem;
     padding-bottom: 4rem;
   }
@@ -20496,7 +20497,7 @@ a.text-primary-hover, button.text-primary-hover {
   transition: all 0.3s ease-in-out;
 }
 a.text-primary-hover:hover, button.text-primary-hover:hover {
-  color: var(--bs-primary) !important;
+  color: white ;
 }
 
 .text-primary-hover li {
@@ -20967,3 +20968,29 @@ a.text-primary-hover:hover, button.text-primary-hover:hover {
   transition: opacity 0.59s ease-in-out;
   font-size: 54px;
 }
+
+.services {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+.services ul {
+  list-style-type: none;
+  padding: 0;
+}
+.services li {
+  margin: 10px 0;
+}
+.book-now {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F89F33;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.book-now:hover {
+  background-color: #d9892d;
+}
+
+
