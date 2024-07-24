@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from mizzle.webestica.com/blog-single-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 May 2024 07:03:20 GMT -->
 <head>
-
-	<title>Mizzle - Technology and Corporate Bootstrap Theme</title>
+	<title>Aidhive - Next generation AC Servicing</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -15,7 +13,7 @@
 	<!-- Dark mode -->
 	<script>
 		const storedTheme = localStorage.getItem('theme')
- 
+
 		const getPreferredTheme = () => {
 			if (storedTheme) {
 				return storedTheme
@@ -34,42 +32,41 @@
 		setTheme(getPreferredTheme())
 
 		window.addEventListener('DOMContentLoaded', () => {
-		    var el = document.querySelector('.theme-icon-active');
-			if(el != 'undefined' && el != null) {
+			var el = document.querySelector('.theme-icon-active');
+			if (el != 'undefined' && el != null) {
 				const showActiveTheme = theme => {
-				const activeThemeIcon = document.querySelector('.theme-icon-active use')
-				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+					const activeThemeIcon = document.querySelector('.theme-icon-active use')
+					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-					element.classList.remove('active')
-				})
-
-				btnToActive.classList.add('active')
-				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-			}
-
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-				if (storedTheme !== 'light' || storedTheme !== 'dark') {
-					setTheme(getPreferredTheme())
-				}
-			})
-
-			showActiveTheme(getPreferredTheme())
-
-			document.querySelectorAll('[data-bs-theme-value]')
-				.forEach(toggle => {
-					toggle.addEventListener('click', () => {
-						const theme = toggle.getAttribute('data-bs-theme-value')
-						localStorage.setItem('theme', theme)
-						setTheme(theme)
-						showActiveTheme(theme)
+					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+						element.classList.remove('active')
 					})
+
+					btnToActive.classList.add('active')
+					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+				}
+
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+					if (storedTheme !== 'light' || storedTheme !== 'dark') {
+						setTheme(getPreferredTheme())
+					}
 				})
 
+				showActiveTheme(getPreferredTheme())
+
+				document.querySelectorAll('[data-bs-theme-value]')
+					.forEach(toggle => {
+						toggle.addEventListener('click', () => {
+							const theme = toggle.getAttribute('data-bs-theme-value')
+							localStorage.setItem('theme', theme)
+							setTheme(theme)
+							showActiveTheme(theme)
+						})
+					})
 			}
 		})
-		
+
 	</script>
 
 	<!-- Favicon -->
@@ -78,344 +75,77 @@
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+		rel="stylesheet">
 
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
-	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEXFC3C67M"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-DEXFC3C67M');
+	</script>
 
 </head>
 
 <body>
 
-<!-- Header START -->
-<header class="header-sticky header-absolute">
-	<!-- Logo Nav START -->
-	<nav class="navbar navbar-expand-xl">
-		<div class="container">
-			<!-- Logo START -->
-			<a class="navbar-brand me-0" href="index-2.html">
-				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
-			</a>
-			<!-- Logo END -->
+	<!-- Header START -->
+	<header class="header-sticky header-absolute">
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-expand-xl">
+			<div class="container">
+				<!-- Logo START -->
+				<a class="navbar-brand me-0" href="index.html">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logoa.png" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<!-- Logo END -->
+				<!-- Toggler/collapsible Button START -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			<!-- Main navbar START -->
-			<div class="navbar-collapse collapse" id="navbarCollapse">
-				<ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+				<!-- Toggler/collapsible Button END -->
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<!-- <ul class="navbar-nav mx-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="index.html">Home</a>
+						</li>
+						
 
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demos</a>
-						<div class="dropdown-menu dropdown-menu-size-lg p-3">
-							<div class="row pt-2">
-								<!-- Image and button -->
-								<div class="col-sm-6">
-									<ul class="list-unstyled">
-										<li> <a class="dropdown-item" href="index-2.html">Classic Default</a> </li>
-										<li> <a class="dropdown-item" href="index-creative-agency.html">Creative Agency</a> </li>
-										<li> <a class="dropdown-item" href="index-digital-agency.html">Digital Agency<span class="badge text-bg-success ms-2">New</span></a> </li>
-										<li> <a class="dropdown-item" href="index-design-agency.html">Design Agency<span class="badge text-bg-success ms-2">New</span></a> </li>
-										<li> <a class="dropdown-item" href="index-seo-agency.html">SEO Agency<span class="badge text-bg-success ms-2">New</span></a> </li>
-										<li> <a class="dropdown-item" href="index-landing-product.html">Product Landing</a> </li>
-										<li> <a class="dropdown-item" href="index-mobile-app-showcase.html">Mobile App Showcase</a> </li>
-									</ul>
-								</div>
 
-								<!-- Index nav links -->
-								<div class="col-sm-6">
-									<ul class="list-unstyled">
-										<li> <a class="dropdown-item" href="index-saas.html">SaaS v.1</a> </li>
-										<li> <a class="dropdown-item" href="index-saas-v2.html">SaaS v.2</a> </li>
-										<li> <a class="dropdown-item" href="index-saas-v3.html">SaaS v.3</a> </li>
-										<li> <a class="dropdown-item" href="index-saas-v4.html">SaaS v.4</a> </li>
-										<li> <a class="dropdown-item" href="index-saas-v5.html">SaaS v.5</a> </li>
-										<li> <a class="dropdown-item" href="index-finance-consulting.html">Finance consulting<span class="badge text-bg-success ms-2">New</span></a> </li>
-										<li> <a class="dropdown-item" href="index-shop.html">Index Shop</a> </li>
-									</ul>
-								</div>
-
-								<!-- CTA -->
-								<div class="col-12">
-									<hr class="mt-2"> <!-- Divider -->
-									<div class="d-sm-flex justify-content-between align-items-center px-2">
-										<div class="me-3 mb-2 mb-sm-0">
-											<h6 class="mb-2 mb-sm-0">Ready to get started?</h6>
-											<small class="mb-0">Take your documents to the next level with Mizzle</small>
-										</div>
-										<a href="#" class="btn btn-sm btn-primary">Get in touch</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Pages</a>
-						<ul class="dropdown-menu">
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="nav-link dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
-								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="about-v1.html">About v.1</a></li>
-									<li> <a class="dropdown-item" href="about-v2.html">About v.2</a></li>
-									<li> <a class="dropdown-item" href="about-v3.html">About v.3</a></li>
-									<li> <a class="dropdown-item" href="team.html">Team</a></li>
-									<li> <a class="dropdown-item" href="services-v1.html">Services v.1</a></li>
-									<li> <a class="dropdown-item" href="services-v2.html">Services v.2</a></li>
-									<li> <a class="dropdown-item" href="service-single.html">Service Single</a></li>
-									<li> <a class="dropdown-item" href="customer-stories.html">Customer Stories</a></li>
-									<li> <a class="dropdown-item" href="customer-story-single.html">Customer Story Single</a></li>
-									<li> <a class="dropdown-item" href="career.html">Career <span class="badge text-bg-primary ms-2">2 Job</span></a></li>
-									<li> <a class="dropdown-item" href="career-single.html">Career Single</a></li>
-								</ul>
-							</li>
-							
-							<li> <a class="dropdown-item" href="contact-v1.html">Contact v.1</a></li>
-							<li> <a class="dropdown-item" href="contact-v2.html">Contact v.2</a></li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">SaaS Pages</a>
-								<ul class="dropdown-menu">
-									<li> <a class="dropdown-item" href="features.html">Features</a></li>
-									<li> <a class="dropdown-item" href="feature-single.html">Feature Single</a></li>
-									<li> <a class="dropdown-item" href="integrations.html">Integrations</a></li>
-									<li> <a class="dropdown-item" href="integration-single.html">Integration Single</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Shop</a>
-								<ul class="dropdown-menu" >
-									<li> <a class="dropdown-item" href="shop-grid.html">Shop Grid</a></li>
-									<li> <a class="dropdown-item" href="shop-single.html">Shop Single</a></li>
-									<li> <a class="dropdown-item" href="shop-cart.html">Shop Cart</a></li>
-									<li> <a class="dropdown-item" href="shop-empty-cart.html">Shop Empty Cart</a></li>
-									<li> <a class="dropdown-item" href="shop-checkout.html">Shop Checkout</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Blog</a>
-								<ul class="dropdown-menu" >
-									<li> <a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-									<li> <a class="dropdown-item" href="blog-list-sidebar.html">Blog List Sidebar</a></li>
-									<li> <a class="dropdown-item" href="blog-single-v1.html">Blog Single v.1</a></li>
-									<li> <a class="dropdown-item" href="blog-single-v2.html">Blog Single v.2</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="nav-link dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Specialty Pages</a>
-								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="help-center.html">Help Center</a></li>
-									<li> <a class="dropdown-item" href="help-center-detail.html">Help Center Detail</a></li>
-									<li> <a class="dropdown-item" href="pricing.html">Pricing</a></li>
-									<li> <a class="dropdown-item" href="faq.html">Faqs</a></li>
-									<li> <a class="dropdown-item" href="error-404.html">Error 404</a></li>
-									<li> <a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
-									<li> <a class="dropdown-item" href="terms-and-condition.html">Terms & Conditions</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Authentication</a>
-								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="sign-up.html">Sign Up</a></li>
-									<li> <a class="dropdown-item" href="sign-in.html">Sign In</a></li>
-									<li> <a class="dropdown-item" href="forgot-password.html">Forgot Password</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown submenu -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Accounts</a>
-								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="account-detail.html">Details</a></li>
-									<li> <a class="dropdown-item" href="account-security.html">Security</a></li>
-									<li> <a class="dropdown-item" href="account-notification.html">Notifications</a></li>
-									<li> <a class="dropdown-item" href="account-projects.html">My Projects</a></li>
-									<li> <a class="dropdown-item" href="account-payment-details.html">Payment Details</a></li>
-									<li> <a class="dropdown-item" href="account-order.html">Order History</a></li>
-									<li> <a class="dropdown-item" href="account-wishlist.html">Wishlist</a></li>
-									<li> <a class="dropdown-item" href="account-delete.html">Delete Profile</a></li>
-								</ul>
-							</li>
-
-							<!-- Dropdown divider -->
-							<li> <hr class="dropdown-divider"></li>
-							
-							<!-- Dropdown Multilevel -->
-							<li class="dropdown dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" href="#">Dropdown levels</a>
-								<ul class="dropdown-menu">
-
-									<!-- dropdown submenu open right -->
-										<li class="dropdown dropend">
-											<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" href="#">Dropdown (end)</a>
-											<ul class="dropdown-menu">
-												<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-												<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-											</ul>
-										</li>
-									<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-
-									<!-- dropdown submenu open left -->
-									<li class="dropdown dropstart">
-										<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" href="#">Dropdown (start)</a>
-										<ul class="dropdown-menu">
-											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-											<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-										</ul>
-									</li>
-									<li> <a class="dropdown-item" href="#">Dropdown item</a> </li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-						<div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
-							<div class="row g-xl-3">
-								<!-- Work -->
-								<div class="col-xl-8 d-none d-xl-block">
-									<div class="d-flex gap-4">
-										<!-- Card -->
-										<div class="card bg-transparent">
-											<!-- Image -->
-											<img src="assets/images/portfolio/list/01.jpg" class="card-img" alt="">
-											<!-- Card body -->
-											<div class="card-body px-0 text-start pb-0">
-												<h6><a href="#">Ceremony Worthy of Time</a></h6>
-												<p class="mb-2 small">We help our customers better manage their web presence.</p>
-												<a class="icon-link icon-link-hover stretched-link mb-0" href="portfolio-case-studies-v1.html">Learn more<i class="bi bi-arrow-right"></i> </a>
-											</div>
-										</div>
-
-										<!-- Card -->
-										<div class="card bg-transparent">
-											<!-- Image -->
-											<img src="assets/images/portfolio/list/02.jpg" class="card-img" alt="">
-											<!-- Card body -->
-											<div class="card-body px-0 text-start pb-0">
-												<h6><a href="#">Brushstrokes and Beyond</a></h6>
-												<p class="mb-2 small">We help our customers better manage their web presence.</p>
-												<a class="icon-link icon-link-hover stretched-link mb-0" href="portfolio-case-studies-v2.html">Learn more<i class="bi bi-arrow-right"></i> </a>
-											</div>
-										</div>
-
-										<!-- Divider line -->
-										<div class="vr ms-2"></div>
-									</div>
-								</div>
-
-								<!-- Index nav links -->
-								<div class="col-xl-4">
-									<ul class="list-unstyled">
-										<li class="dropdown-header h6">Portfolio Pages</li>
-										<li> <a class="dropdown-item" href="portfolio-masonry.html">Portfolio Masonry</a> </li>
-										<li> <a class="dropdown-item" href="portfolio-showcase.html">Portfolio Showcase</a> </li>
-										<li> <a class="dropdown-item" href="portfolio-list.html">Portfolio List</a> </li>
-										<li> <a class="dropdown-item" href="portfolio-case-studies-v1.html">Portfolio Case Study v.1</a> </li>
-										<li> <a class="dropdown-item" href="portfolio-case-studies-v2.html">Portfolio Case Study v.2</a> </li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="contact-v1.html">Contact us</a> </li>
-
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="docs/index.html" target="_blank">Docs</a> </li>
-				</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="commericial.html">commercial</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="career.html">Career</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog.html">Blog</a>
+						</li>
+					 
+					</ul> -->
+				</div>
+				<!-- Main navbar END -->
 			</div>
-			<!-- Main navbar END -->
-
-			<!-- Buttons -->
-			<ul class="nav align-items-center dropdown-hover ms-sm-2">
-				<!-- Dark mode option START -->
-				<li class="nav-item dropdown dropdown-animation">
-					<button class="btn btn-link mb-0 px-2 lh-1" id="bd-theme"
-					type="button"
-					aria-expanded="false"
-					data-bs-toggle="dropdown"
-					data-bs-display="static">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-circle-half theme-icon-active fill-mode fa-fw" viewBox="0 0 16 16">
-						<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-						<use href="#"></use>
-					</svg>
-					</button>
-
-					<ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
-						<li class="mb-1">
-							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-								<svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
-									<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-									<use href="#"></use>
-								</svg>Light
-							</button>
-						</li>
-						<li class="mb-1">
-							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
-									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-									<use href="#"></use>
-								</svg>Dark
-							</button>
-						</li>
-						<li>
-							<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">
-									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-									<use href="#"></use>
-								</svg>Auto
-							</button>
-						</li>
-					</ul>
-				</li>
-				<!-- Dark mode option END -->
-
-				<!-- Sign up button -->
-				<li class="nav-item me-2">
-					<a href="sign-up.html" class="btn btn-sm btn-light mb-0"><i class="bi bi-person-circle me-1"></i>Sign up</a>
-				</li>
-				<!-- Buy now button -->
-				<li class="nav-item d-none d-sm-block">
-					<button class="btn btn-sm btn-primary mb-0">Buy now!</button>
-				</li>
-				<!-- Responsive navbar toggler -->
-				<li class="nav-item">
-					<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-animation">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</button>
-				</li>	
-			</ul>
-
-		</div>
-	</nav>
-	<!-- Logo Nav END -->
-</header>
+		</nav>
+		<!-- Logo Nav END -->
+	</header>
+	<!-- Header END -->
 <!-- Header END -->
-
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 
@@ -430,19 +160,19 @@ Blog detail START -->
 				<div class="d-flex position-relative z-index-9">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb breadcrumb-dots mb-1">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item"><a href="#">Blog</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Blog single sidebar</li>
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+							
 						</ol>
 					</nav>
 				</div>
 
 				<!-- Title -->
-				<h1 class="h2 mb-0">The Power of Gratitude: Cultivating Joy and Abundance</h1>
+				<h1 class="h2 mb-0">The Importance of Regular Appliance Maintenance </h1>
 
 				<!-- Action -->
 				<div class="d-flex align-items-center flex-wrap mt-4">
-					<a href="#" class="badge text-bg-dark mb-0">Lifestyle</a>
+					<a href="#" class="badge text-bg-dark mb-0">Appliance</a>
 					<span class="text-secondary opacity-3 mx-3">|</span>
 					<div class="dropdown">
 						<a href="#" class="text-secondary text-primary-hover" id="cardFeedAction" data-bs-toggle="dropdown" aria-expanded="false">
@@ -458,18 +188,17 @@ Blog detail START -->
 					</div>
 					<span class="text-secondary opacity-3 mx-3">|</span>
 					<a href="#" class="text-secondary text-primary-hover mb-0"><i class="bi bi-chat me-2"></i>5</a>
-					<span class="text-secondary opacity-3 mx-3">|</span>
-					<span class="text-secondary">2 min read</span>
+				
 				</div>
 
 				<!-- Image -->
 				<img src="assets/images/blog/03.jpg" class="img-fluid rounded mt-5" alt="blog-img">
 
-				<!-- Content -->
-				<p class="mt-5">Shifting our perspective from lack to abundance. In this article, we will explore the power of gratitude and how it can enhance our overall well-being and create a positive ripple effect in our lives and the lives of those around us. <strong>In a world filled with chaos</strong> and uncertainty, it's easy to lose sight of the things that truly matter.</p>
-				<p>Additionally, expressing gratitude to others through acts of kindness or <u> heartfelt appreciation strengthens our relationships and</u> fosters a sense of interconnectedness.</p>
-				<p>Incorporating gratitude into our daily routine can be as simple as keeping a gratitude journal, where we write down three things we are grateful for each day. <strong>This practice helps us become more attuned</strong> to the positive aspects of our lives, no matter how small they may seem. </p>
-				<p class="mb-0">By reframing obstacles as opportunities for growth and learning, <mark>we can navigate through difficulties with</mark> a sense of gratitude for the lessons they bring. This mindset shift empowers us to find joy and meaning in every circumstance, leading to a more fulfilling and purposeful life.</p>
+				<p class="mt-5">Regular maintenance of your household appliances can extend their lifespan and improve performance. Proper care ensures that your appliances run efficiently, reducing energy consumption and saving you money on utility bills. Additionally, well-maintained appliances are less likely to break down, which can help you avoid costly repairs or replacements.</p>
+<p>To keep your appliances in top shape, start by following the manufacturer's instructions for cleaning and maintenance. This often includes tasks such as regularly cleaning filters, checking for leaks, and inspecting hoses and connections for signs of wear and tear. For example, cleaning the lint filter in your dryer after each use not only improves efficiency but also reduces the risk of fire.</p>
+<p>Another important aspect of appliance maintenance is scheduling regular professional inspections. Technicians can identify potential issues before they become major problems, ensuring your appliances continue to operate smoothly. For larger appliances like refrigerators and HVAC systems, consider annual or bi-annual check-ups to keep them running efficiently.</p>
+<p>Finally, be mindful of how you use your appliances. Avoid overloading washing machines and dishwashers, as this can strain the motor and other components. Use the appropriate settings for different types of loads to optimize performance and prevent unnecessary wear.</p>
+<p class="mb-0">By investing a little time and effort into regular maintenance, you can enjoy the benefits of reliable, efficient appliances that stand the test of time. Not only will this improve the performance and longevity of your household appliances, but it will also contribute to a more sustainable and cost-effective household.</p>
 
 				<!-- Quote -->
 				<blockquote class="card card-body bg-light overflow-hidden mt-5 p-sm-5">
@@ -479,28 +208,32 @@ Blog detail START -->
 					<!-- Quote icon -->
 					<span class="display-4 position-absolute top-0 start-0 opacity-1 mt-n3"><i class="bi bi-quote"></i></span>
 
-					<q class="fs-6 heading-color">Fulfilled direction use continual set him propriety continued. Farther-related bed and passage comfort civilly. Concluded boy perpetual old supposing.</q>
-					<div class="blockquote-footer mb-0 lead mt-3">
-						Albert Schweitzer
-					</div>
+					<q class="fs-6 heading-color mt-4">"Investing in renewable energy means investing in a healthier planet for future generations."</q>
+<div class="blockquote-footer mb-0 lead mt-3">
+    Clean Energy Supporter
+</div>
 				</blockquote>
 
 				<!-- Image and list content -->
 				<div class="row mt-5">
 					<!-- Content -->
 					<div class="col-md-6">
-						<h6 class="mb-4">The Ripple Effect of Gratitude</h6>
+						<h6 class="mb-4">Benefits of Regular Maintenance</h6>
 						<!-- List -->
 						<ul class="ps-4 mb-4">
-							<li class="mb-2">Gratitude allows us to shift our perspective from focusing on. </li>
-							<li class="mb-2">By recognizing and acknowledging the blessings in our lives.</li>
-							<li class="mb-2">Scientific research has demonstrated that. </li>
-							<li class="mb-2">It allows us to focus on the positive aspects.</li>
-							<li class="mb-2">The power of gratitude extends beyond.</li>
-							<li class="mb-2">By embracing a mindset of gratitude.</li>
+							<li class="mb-2"><b>Longevity:</b> Regular maintenance prevents wear and tear, extending the lifespan of your appliances.</li>
+							<li class="mb-2"><b>Efficiency:</b> Keeps appliances running at optimal performance, reducing energy consumption.</li>
 						</ul>
+						<h6 class="mb-4">Common Appliance Issues</h6>
+						<ul class="ps-4 mb-4">
+							<li class="mb-2"><b>Prevention:</b> Regular checks can prevent common issues like leaks, noise, and malfunction.</li>
+							<li class="mb-2"><b>Solutions:</b> Addressing small problems before they become major repairs.</li>
+						</ul>
+						
 						<!-- Content -->
-						<p class="small mb-0">Recognizing and acknowledging the blessings in our lives, we invite a sense of abundance and contentment.</p>
+						
+						<p class="small mb-0"><b>Conclusion:</b> Regular maintenance is key to keeping your appliances in top condition. Contact AidHive for comprehensive appliance maintenance services that ensure longevity and efficiency.</p>
+					
 					</div>
 
 					<!-- Image -->
@@ -540,11 +273,11 @@ Blog detail START -->
 							<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
 						</div>
 						<div class="ms-2">
-							<h6 class="mb-0"><a href="#">Louis Crawford</a></h6>
-							<small>Content creator</small>
+							<h6 class="mb-0"><a href="#">Navjot Singh</a></h6>
+							<small>Appliance Expert</small>
 						</div>
 					</div>
-					<p>Incorporating gratitude into our daily where we write down three things we are grateful for each day.</p>
+					<p>Regular maintenance of household appliances is essential to ensure they run efficiently and last longer. By following simple upkeep routines, such as cleaning filters and checking seals, you can prevent common issues and enhance the performance of your appliances.</p>
 					<!-- Button -->
 					<a href="#" class="btn btn-sm btn-outline-primary mb-0">Follow author</a>
 				</div>
@@ -554,11 +287,11 @@ Blog detail START -->
 					<h6 class="mb-3 d-inline-block">Related post:</h6>
 
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">5 investment doubts you should clarify</a></li>
-						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Mastering Responsive Web Design with Bootstrap</a></li>
-						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Effortless Web Development with Mizzle</a></li>
-						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Sleek and Responsive - Designing with Bootstrap and Mizzle</a></li>
-						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Ten questions you should answer truthfully.</a></li>
+						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold"> Understanding Annual Maintenance Contracts (AMC) for Your Business</a></li>
+						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Top 10 AC Maintenance Tips for a Comfortable Home</a></li>
+						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Top Signs Your HVAC System Needs Repair</a></li>
+						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">Electrical Safety Tips for Your Home</a></li>
+						<li class="list-group-item ps-0"><a href="#" class="heading-color text-primary-hover fw-semibold">How to Choose the Right HVAC System for Your Home</a></li>
 					</ul>
 				</div>
 
@@ -566,18 +299,18 @@ Blog detail START -->
 				<div class="align-items-center mt-5">
 					<h6 class="mb-3 d-inline-block">Popular Tags:</h6>
 					<ul class="list-inline mb-0">
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">blog</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">business</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">bootstrap</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">data science</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">deep learning</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Adventure</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Community</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Tutorials</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Interview</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Photography</a> </li>
-						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Classic</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Maintenance</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Energy Efficiency</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Repair Tips</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Home Appliances</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Kitchen Gadgets</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Washer and Dryer</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Refrigerator Care</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">HVAC Systems</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Cleaning Tips</a> </li>
+						<li class="list-inline-item"> <a class="btn btn-light btn-sm" href="#">Smart Appliances</a> </li>
 					</ul>
+					
 				</div>
 			</div>
 			<!-- Sidebar END -->
@@ -593,6 +326,8 @@ Blog detail END -->
 
 <!-- =======================
 Footer START -->
+<!-- !-- ======================= -->
+<!-- Footer START --> 
 <footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
 
 	<!-- SVG decoration -->
@@ -624,10 +359,12 @@ Footer START -->
 				<!-- logo -->
 				<a class="me-0" href="index-2.html">
 					<img class="light-mode-item h-40px" src="assets/images/logo.svg" alt="logo">
-					<img class="dark-mode-item h-40px" src="assets/images/logo-light.svg" alt="logo">
+					<img class="dark-mode-item h-40px" src="assets/images/logoa.png" alt="logo">
 				</a>
 
-				<p class="mt-4 mb-2">A Bootstrap theme that's both stylish and functional, perfect for any type of technology or corporate website.</p>
+				<p class="mt-4 mb-2">AidHive offers reliable and professional services for HVAC, electrical, and appliances,
+					ensuring comfort and efficiency for your home or business. Perfect for any residential or
+					commercial needs.</p>
 			</div>
 			<!-- Widget 1 END -->
 
@@ -638,53 +375,48 @@ Footer START -->
 					<div class="col-6 col-md-4">
 						<h6 class="mb-2 mb-md-4">Quick links</h6>
 						<ul class="nav flex-column">
-							<li class="nav-item"><a class="nav-link pt-0" href="about-v1.html">About us</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact-v1.html">Contact us</a></li>
-							<li class="nav-item"><a class="nav-link" href="career.html">Career <span class="badge text-bg-danger ms-2">2 Job</span></a></li>
-							<li class="nav-item"><a class="nav-link" href="career-single.html">Career detail</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact-v1.html">Become a partner</a></li>
-							<li class="nav-item"><a class="nav-link" href="sign-in.html">Sign in</a></li>
-							<li class="nav-item"><a class="nav-link" href="sign-up.html">Sign up</a></li>
+							<li class="nav-item"><a class="nav-link pt-0" href="about-v3.html">About us</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact-v2.html">Contact us</a></li>
+								<!-- <li class="nav-item"><a class="nav-link" href="career.html">Career <span class="badge text-bg-danger ms-2">2 Job</span></a></li> -->
+								<li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+								<li class="nav-item"><a class="nav-link" href="blog-grid.html">News and blogs</a></li>
+								
 						</ul>
 					</div>
 
-					<!-- Link block -->
-					<div class="col-6 col-md-4">
-						<h6 class="mb-2 mb-md-4">Community</h6>
-						<ul class="nav flex-column">
-							<li class="nav-item"><a class="nav-link pt-0" href="#">Documents</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Supports <i class="bi bi-box-arrow-up-right small ms-1"></i></a></li>
-							<li class="nav-item"><a class="nav-link" href="faq.html">Faqs</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
-							<li class="nav-item"><a class="nav-link" href="blog-grid.html">News and blogs</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Terms & condition</a></li>
-						</ul>
-					</div>
+				
+				<!-- Link block -->
+				<div class="col-6 col-md-4">
+					<h6 class="mb-2 mb-md-4">Our Services</h6>
+					<ul class="nav flex-column">
+						<!-- <li class="nav-item"><a class="nav-link pt-0" href="#">Documents</a></li> -->
+						<li class="nav-item"><a class="nav-link" href="hvac_ser.html">HVAC Service<i class="bi bi-box-arrow-up-right small ms-1"></i></a></li>
+						<li class="nav-item"><a class="nav-link" href="faq.html">Appliance Repair & Service</a></li>
+						<li class="nav-item"><a class="nav-link" href="Ar_Service.html">Appliance Service</a></li>
+						
+						<li class="nav-item"><a class="nav-link" href="amc.html">Annual Maintenance Contracts (AMC)</a></li>
+					</ul>
+				</div>
 
 					<!-- Link block -->
 					<div class="col-md-4">
-						<h6 class="mb-2 mb-md-4">App available on</h6>
-						<div class="row g-2 mt-2 mb-4 mb-sm-5">
-							<!-- Google play store button -->
-							<div class="col-5 col-sm-4 col-md-6">
-								<a href="#"> <img src="assets/images/elements/google-play.svg" alt=""> </a>
-							</div>
+						<h6 class="mb-2 mb-md-4">Follow on</h6>
+						<ul class="list-inline mb-0 mt-3">
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.facebook.com/aidhiveworkshop.pvt.ltd/"><i class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.instagram.com/aidhiveworkshop/"><i class="fab fa-fw fa-instagram lh-base"></i></a> </li>
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.linkedin.com/in/aidhiveworkshopofficial/"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://twitter.com/Aidhiveworkshop"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
+
+						</ul>
+							
 							<!-- App store button -->
-							<div class="col-5 col-sm-4 col-md-6">
-								<a href="#"> <img src="assets/images/elements/app-store.svg" alt="app-store"> </a>
-							</div>
-						</div>
+							
+						
 
 						<!-- Social buttons -->
-						<h6 class="mb-2 mb-md-4">Follow on</h6>
+						
 
-						<ul class="list-inline mb-0 mt-3">
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-instagram lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-youtube lh-base"></i></a> </li>
-						</ul>
+				
 					</div>
 				</div>
 			</div>
@@ -697,19 +429,8 @@ Footer START -->
 		<!-- Bottom footer -->
 		<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
 			<!-- copyright text -->
-			<div class="text-body"> Copyrights ©2024 Mizzle. Build by <a href="https://www.webestica.com/" class="text-body text-primary-hover">Webestica</a>. </div>
-			<!-- copyright links-->
-			<!-- Language selector -->
-			<div class="dropdown dropup text-center text-md-end mt-3 mt-md-0">
-				<a class="dropdown-toggle btn btn-sm btn-light mb-0" href="#" role="button" id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
-					<i class="fas fa-globe me-2"></i>Language
-				</a>
-				<ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-					<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a></li>
-					<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">German </a></li>
-					<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">French</a></li>
-				</ul>
-			</div>
+			<div class="text-body"> Copyright ©2024 Aidhive Workshop Pvt. Ltd</div>
+			
 		</div>
 	</div>
 </footer>
@@ -723,12 +444,21 @@ Footer END -->
 <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <!--Vendors-->
+<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Theme Functions -->
+<script src="assets/js/functions.js"></script>
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Vendors-->
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.js"></script>
 
 <!-- Theme Functions -->
 <script src="assets/js/functions.js"></script>
-
 </body>
 
-<!-- Mirrored from mizzle.webestica.com/blog-single-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 May 2024 07:03:20 GMT -->
+
 </html>
