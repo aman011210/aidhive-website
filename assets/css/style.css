@@ -20994,3 +20994,12 @@ a.text-primary-hover:hover, button.text-primary-hover:hover {
 }
 
 
+.rounded1 {
+  width: 95%; /* Adjust as needed */
+  height: 70%; /* Adjust as needed */
+  object-fit: cover;
+  object-position: center;
+  clip-path: inset(60px 0 60px 0);
+  filter: hue-rotate(350deg) saturate(120%);
+}
+
