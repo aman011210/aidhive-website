@@ -1,10 +1,3 @@
-/**
-* Mizzle - Technology and Corporate Bootstrap Theme
-*
-* @author Webestica (https://www.webestica.com/)
-* @version 1.1.0
-**/
-
 
 /* ===================
 Table Of Content

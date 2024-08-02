@@ -2,165 +2,166 @@
 <html lang="en">
 
 <head>
-    <title>Aidhive - Next generation AC Servicing</title>
+	<title>Aidhive - Next generation AC Servicing</title>
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Webestica.com">
-    <meta name="description" content="Technology and Corporate Bootstrap Theme">
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Technology and Corporate Bootstrap Theme">
 
-    <!-- Dark mode -->
-    <script>
-        const storedTheme = localStorage.getItem('theme')
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
 
-        const getPreferredTheme = () => {
-            if (storedTheme) {
-                return storedTheme
-            }
-            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-        }
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
 
-        const setTheme = function (theme) {
-            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark')
-            } else {
-                document.documentElement.setAttribute('data-bs-theme', theme)
-            }
-        }
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
 
-        setTheme(getPreferredTheme())
+		setTheme(getPreferredTheme())
 
-        window.addEventListener('DOMContentLoaded', () => {
-            var el = document.querySelector('.theme-icon-active');
-            if (el != 'undefined' && el != null) {
-                const showActiveTheme = theme => {
-                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
-                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+		window.addEventListener('DOMContentLoaded', () => {
+			var el = document.querySelector('.theme-icon-active');
+			if (el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+					const activeThemeIcon = document.querySelector('.theme-icon-active use')
+					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                        element.classList.remove('active')
-                    })
+					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+						element.classList.remove('active')
+					})
 
-                    btnToActive.classList.add('active')
-                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-                }
+					btnToActive.classList.add('active')
+					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+				}
 
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
-                        setTheme(getPreferredTheme())
-                    }
-                })
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+					if (storedTheme !== 'light' || storedTheme !== 'dark') {
+						setTheme(getPreferredTheme())
+					}
+				})
 
-                showActiveTheme(getPreferredTheme())
+				showActiveTheme(getPreferredTheme())
 
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', () => {
-                            const theme = toggle.getAttribute('data-bs-theme-value')
-                            localStorage.setItem('theme', theme)
-                            setTheme(theme)
-                            showActiveTheme(theme)
-                        })
-                    })
-            }
-        })
+				document.querySelectorAll('[data-bs-theme-value]')
+					.forEach(toggle => {
+						toggle.addEventListener('click', () => {
+							const theme = toggle.getAttribute('data-bs-theme-value')
+							localStorage.setItem('theme', theme)
+							setTheme(theme)
+							showActiveTheme(theme)
+						})
+					})
+			}
+		})
 
-    </script>
+	</script>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+		rel="stylesheet">
 
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
 
-    <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEXFC3C67M"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DEXFC3C67M"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-        gtag('config', 'G-DEXFC3C67M');
-    </script>
+		gtag('config', 'G-DEXFC3C67M');
+	</script>
 
 </head>
 
 <body>
 
-    <!-- Header START -->
-<header class="header-sticky header-absolute">
-    <!-- Logo Nav START -->
-    <nav class="navbar navbar-expand-xl">
-        <div class="container">
-            <!-- Logo START -->
-            <a class="navbar-brand me-0" href="index.html">
-                <img class="light-mode-item navbar-brand-item" src="assets/images/logoa.png" alt="logo">
-                <img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
-            </a>
-            <!-- Logo END -->
+	<!-- Header START -->
+	<header class="header-sticky header-absolute">
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-expand-xl">
+			<div class="container">
+				<!-- Logo START -->
+				<a class="navbar-brand me-0" href="index.html">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logoa.png" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<!-- Logo END -->
+				<!-- Toggler/collapsible Button START -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-            <!-- Toggler/collapsible Button START -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding: 0.25rem 0.5rem; font-size: 0.875rem;">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-			
-            <!-- Toggler/collapsible Button END -->
-
-            <!-- Main navbar START -->
-            <div class="navbar-collapse collapse" id="navbarCollapse">
-                <ul class="navbar-nav mx-auto" style="gap: 0.1rem;">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="about-v3.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="commericial.html">Commercial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services-v2.html">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="career.html">Career</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-					<li class="nav-item">
-						<a class="btn" href="tel:909400410"
-							style="background-color: #F89F33; color: white; padding: 10px 20px; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; transition: background-color 0.3s ease;"
-							onmouseover="this.style.backgroundColor='#e87a00';"
-							onmouseout="this.style.backgroundColor='#F89F33';">
-							Call today for service
-						</a>
-					</li>
-                    
-                </ul>
-            </div>
-            <!-- Main navbar END -->
-        </div>
-    </nav>
-    <!-- Logo Nav END -->
-</header>
-    <!-- Header END -->
-    
+				<!-- Toggler/collapsible Button END -->
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<ul class="navbar-nav mx-auto">
+						
+						<li class="nav-item">
+							<a class="nav-link" href="about-v3.html">About</a>
+						</li>
 
 
+						<li class="nav-item">
+							<a class="nav-link" href="commericial.html">commercial</a>
+
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="services-v2.html">service</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="career.html">Career</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog.html">Blog</a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="btn" href="tel:909400410"
+								style="background-color: #F89F33; color: white; padding: 10px 20px; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; transition: background-color 0.3s ease;"
+								onmouseover="this.style.backgroundColor='#e87a00';"
+								onmouseout="this.style.backgroundColor='#F89F33';">
+								Call today for service
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Main navbar END -->
+			</div>
+		</nav>
+		<!-- Logo Nav END -->
+	</header>
+	<!-- Header END -->
 <!-- Header END -->
 
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
+  
 
 <!-- =======================
 Main Banner START -->
@@ -265,13 +266,7 @@ Main Banner START -->
 				<!-- Hero image -->
 				<img src="assets/images/bg/home.jpg" class="rounded1" alt="hero-img"></br>
 
-				<!-- Visitor box START -->
-
-				<!-- Visitor box END --> 
-
-				<!-- Trustpilot review START -->
-
-				<!-- Trustpilot review END -->
+				
 			</div>
 			<!-- Hero Image END -->
 
@@ -487,10 +482,10 @@ Services START -->
 						</div>
 						<!-- Content -->
 						<h5 class="mb-3"><a href="#">HVAC Services</a></h5>
-						<p>Installation & maintenance of heating, ventilation & air conditioning systems.</p>
+						<p>Installation & maintenance of heating, ventilation & air conditioning systemsensuring optimal performance, energy efficiency, and comfort for homes and businesses.</p>
 					</div>
 					<div class="card-footer bg-light mt-auto pt-2">
-						<a class="icon-link icon-link-hover" href="#">Know more<i class="bi bi-arrow-right"></i> </a>
+						<a class="icon-link icon-link-hover" href="index-saas-v2.html">Know more<i class="bi bi-arrow-right"></i> </a>
 					</div>
 				</div>
 			</div>
@@ -505,10 +500,10 @@ Services START -->
 						</div>
 						<!-- Content -->
 						<h5 class="mb-3"><a href="#">Appliance Repair & Service</a></h5>
-						<p>Creating products that users love and businesses need .</p>
+						<p>Delivering exceptional repair and maintenance services to ensure seamless, efficient operation for household and commercial appliances.</p>
 					</div>
 					<div class="card-footer bg-light mt-auto pt-2">
-						<a class="icon-link icon-link-hover" href="#">Know more<i class="bi bi-arrow-right"></i> </a>
+						<a class="icon-link icon-link-hover" href="Ar_Service.html">Know more<i class="bi bi-arrow-right"></i> </a>
 					</div>
 				</div>
 			</div>
@@ -543,12 +538,12 @@ Services START -->
 							<i class="bi bi-vector-pen fa-fw fs-5"></i>
 						</div>
 						<!-- Content -->
-						<h5 class="mb-3"><a href="#">Annual Maintenance Contracts (AMC)</a></h5>
+						<h5 class="mb-3"><a href="amc.html">Annual Maintenance Contracts (AMC)</a></h5>
 						<p>Customizable contracts for proactive
 							maintenance, providing peace of mind and optimal performance year-round.</p>
 					</div>
 					<div class="card-footer bg-light mt-auto pt-2">
-						<a class="icon-link icon-link-hover" href="#">Know more<i class="bi bi-arrow-right"></i> </a>
+						<a class="icon-link icon-link-hover" href="amc.html">Know more<i class="bi bi-arrow-right"></i> </a>
 					</div>
 				</div>
 			</div>
@@ -903,8 +898,8 @@ Footer START -->
 						<ul class="list-inline mb-0 mt-3">
 							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.facebook.com/aidhiveworkshop.pvt.ltd/"><i class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
 							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.instagram.com/aidhiveworkshop/"><i class="fab fa-fw fa-instagram lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.linkedin.com/in/aidhiveworkshopofficial/"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
-							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://twitter.com/Aidhiveworkshop"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://twitter.com/Aidhiveworkshop"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
+							<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="https://www.linkedin.com/in/aidhiveworkshopofficial/"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
 
 						</ul>
 							
@@ -937,37 +932,20 @@ Footer START -->
 Footer END -->
 
 <!-- Back to top -->
-<div class="back-top"></div>
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<!--Vendors-->
-<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-<!-- Theme Functions -->
-<script src="assets/js/functions.js"></script>
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<!--Vendors-->
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.js"></script>
-
-<!-- Theme Functions -->
-<script src="assets/js/functions.js"></script>
 
 
 	<!-- Back to top -->
 	<div class="back-top"></div>
 
-	<!-- Bootstrap JS -->
 	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!--Vendors-->
 	<script src="assets/vendor/ityped/index.js"></script>
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	
+	<!-- Theme Functions -->
+	<script src="assets/js/functions.js"></script>
 
 	<!-- Theme Functions -->
 	<script src="assets/js/functions.js"></script>
