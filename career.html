@@ -10,64 +10,7 @@
     <meta name="author" content="Webestica.com">
     <meta name="description" content="Technology and Corporate Bootstrap Theme">
 
-    <!-- Dark mode -->
-    <script>
-        const storedTheme = localStorage.getItem('theme')
-
-        const getPreferredTheme = () => {
-            if (storedTheme) {
-                return storedTheme
-            }
-            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-        }
-
-        const setTheme = function (theme) {
-            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark')
-            } else {
-                document.documentElement.setAttribute('data-bs-theme', theme)
-            }
-        }
-
-        setTheme(getPreferredTheme())
-
-        window.addEventListener('DOMContentLoaded', () => {
-            var el = document.querySelector('.theme-icon-active');
-            if (el != 'undefined' && el != null) {
-                const showActiveTheme = theme => {
-                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
-                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
-                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                        element.classList.remove('active')
-                    })
-
-                    btnToActive.classList.add('active')
-                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-                }
-
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
-                        setTheme(getPreferredTheme())
-                    }
-                })
-
-                showActiveTheme(getPreferredTheme())
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', () => {
-                            const theme = toggle.getAttribute('data-bs-theme-value')
-                            localStorage.setItem('theme', theme)
-                            setTheme(theme)
-                            showActiveTheme(theme)
-                        })
-                    })
-            }
-        })
-
-    </script>
+   
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -221,39 +164,39 @@ Main Banner START -->
 
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/01.jpg" class="rounded" alt="">
+				<img src="assets/images/about/5.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/02.jpg" class="rounded" alt="">
+				<img src="assets/images/about/4.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/12.jpg" class="rounded" alt="">
+				<img src="assets/images/about/003.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/04.jpg" class="rounded" alt="">
+				<img src="assets/images/about/2.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/14.jpg" class="rounded" alt="">
+				<img src="assets/images/about/1.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/bg/01.jpg" class="rounded" alt="">
+				<img src="assets/images/bg/010.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/16.jpg" class="rounded" alt="">
+				<img src="assets/images/about/9.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/08.jpg" class="rounded" alt="">
+				<img src="assets/images/about/8.jpg" class="rounded" alt="">
 			</div>
 			<!-- Slider item -->
 			<div class="swiper-slide">
-				<img src="assets/images/about/03.jpg" class="rounded" alt="">
+				<img src="assets/images/about/003.jpg" class="rounded" alt="">
 			</div>
 		</div>		
 	</div>
@@ -291,7 +234,7 @@ Value START -->
 					</svg>
 				</figure>
 
-				<img src="assets/images/about/17.jpg" class="rounded" alt="">
+				<img src="assets/images/about/001.jpg" class="rounded" alt="">
 			</div>
 
 			<!-- Content -->
