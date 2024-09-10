@@ -10,64 +10,7 @@
     <meta name="author" content="Webestica.com">
     <meta name="description" content="Technology and Corporate Bootstrap Theme">
 
-    <!-- Dark mode -->
-    <script>
-        const storedTheme = localStorage.getItem('theme')
-
-        const getPreferredTheme = () => {
-            if (storedTheme) {
-                return storedTheme
-            }
-            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-        }
-
-        const setTheme = function (theme) {
-            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark')
-            } else {
-                document.documentElement.setAttribute('data-bs-theme', theme)
-            }
-        }
-
-        setTheme(getPreferredTheme())
-
-        window.addEventListener('DOMContentLoaded', () => {
-            var el = document.querySelector('.theme-icon-active');
-            if (el != 'undefined' && el != null) {
-                const showActiveTheme = theme => {
-                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
-                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
-                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                        element.classList.remove('active')
-                    })
-
-                    btnToActive.classList.add('active')
-                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-                }
-
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
-                        setTheme(getPreferredTheme())
-                    }
-                })
-
-                showActiveTheme(getPreferredTheme())
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', () => {
-                            const theme = toggle.getAttribute('data-bs-theme-value')
-                            localStorage.setItem('theme', theme)
-                            setTheme(theme)
-                            showActiveTheme(theme)
-                        })
-                    })
-            }
-        })
-
-    </script>
+   
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -429,8 +372,8 @@ How it works START 1 -->
 
 					<!-- Image -->
 					<div class="col-11 col-lg-7 ms-lg-n8 mx-auto mt-n5 mt-lg-0">
-						<div class="bg-primary bg-opacity-50 rounded p-5 overflow-hidden ms-3">
-							<img src="assets/images/elements/saas-decoration/decoration-4.png" alt="decoration">
+						<div class="bg-opacity-50 rounded p-5 overflow-hidden ms-3">
+							<img src="assets/images/Commercial-AMC Page/HVAC system maintenance.jpg" alt="decoration">
 						</div>
 					</div>
 				</div>
@@ -449,8 +392,8 @@ How it works START 1 -->
 
 					<!-- Image -->
 					<div class="col-11 col-lg-7 me-lg-n8 mx-auto mt-n5 mt-lg-0 z-index-2 position-relative order-2">
-						<div class="card card-body shadow rounded p-5 overflow-hidden me-3">
-							<img src="assets/images/elements/saas-decoration/decoration-2.png" class="" alt="decoration">
+						<div class=" rounded p-5 overflow-hidden me-3">
+							<img src="assets/images/Commercial-AMC Page/Electrical system maintenance.jpg" class="" alt="decoration">
 						</div>
 					</div>
 
@@ -468,8 +411,10 @@ How it works START 1 -->
 							
 						
 						</div>	
+						
 					</div>
 				</div>
+				
 
 				<!-- Step 3 -->
 				<div class="row flex-lg-nowrap align-items-center">
@@ -491,12 +436,15 @@ How it works START 1 -->
 
 					<!-- Image -->
 					<div class="col-11 col-lg-7 ms-lg-n8 mx-auto mt-n5 mt-lg-0">
-						<div class="bg-dark rounded p-5 overflow-hidden ms-3">
-							<img src="assets/images/elements/saas-decoration/decoration-3.png" class="" alt="decoration">
+						<div class=" rounded p-5 overflow-hidden ms-3">
+							<img src="assets/images/Commercial-AMC Page/Appliances maintenenace.jpg" class="" alt="decoration">
 						</div>
 					</div>
+					
 				</div>
+				
 			</div>
+			
 		</div>
 		 
 <!-- Start 2 -->
@@ -513,8 +461,8 @@ How it works START 1 -->
 
 	<!-- Image -->
 	<div class="col-11 col-lg-7 me-lg-n8 mx-auto mt-n5 mt-lg-0 z-index-2 position-relative order-2">
-		<div class="card card-body shadow rounded p-5 overflow-hidden me-3">
-			<img src="assets/images/elements/saas-decoration/decoration-2.png" class="" alt="decoration">
+		<div class=" rounded p-5 overflow-hidden me-3">
+			<img src="assets/images/Commercial-AMC Page/Energy efficiency audit.jpg" class="" alt="decoration">
 		</div>
 	</div>
 
@@ -563,8 +511,8 @@ How it works START 1 -->
 
 					<!-- Image -->
 					<div class="col-11 col-lg-7 ms-lg-n8 mx-auto mt-n5 mt-lg-0">
-						<div class="bg-primary bg-opacity-50 rounded p-5 overflow-hidden ms-3">
-							<img src="assets/images/elements/saas-decoration/decoration-4.png" alt="decoration">
+						<div class=" bg-opacity-50 rounded p-5 overflow-hidden ms-3">
+							<img src="assets/images/Commercial-AMC Page/Safety Inspections.jpg" alt="decoration">
 						</div>
 					</div>
 				</div>
@@ -583,8 +531,8 @@ How it works START 1 -->
 
 					<!-- Image -->
 					<div class="col-11 col-lg-7 me-lg-n8 mx-auto mt-n5 mt-lg-0 z-index-2 position-relative order-2">
-						<div class="card card-body shadow rounded p-5 overflow-hidden me-3">
-							<img src="assets/images/elements/saas-decoration/decoration-2.png" class="" alt="decoration">
+						<div class=" card-body shadow rounded p-5 overflow-hidden me-3">
+							<img src="assets/images/Commercial-AMC Page/Cusomized maintenance plan (2).jpg" class="" alt="decoration">
 						</div>
 					</div>
 
