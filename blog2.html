@@ -10,64 +10,7 @@
 	<meta name="author" content="Webestica.com">
 	<meta name="description" content="Technology and Corporate Bootstrap Theme">
 
-	<!-- Dark mode -->
-	<script>
-		const storedTheme = localStorage.getItem('theme')
-
-		const getPreferredTheme = () => {
-			if (storedTheme) {
-				return storedTheme
-			}
-			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-		}
-
-		const setTheme = function (theme) {
-			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.setAttribute('data-bs-theme', 'dark')
-			} else {
-				document.documentElement.setAttribute('data-bs-theme', theme)
-			}
-		}
-
-		setTheme(getPreferredTheme())
-
-		window.addEventListener('DOMContentLoaded', () => {
-			var el = document.querySelector('.theme-icon-active');
-			if (el != 'undefined' && el != null) {
-				const showActiveTheme = theme => {
-					const activeThemeIcon = document.querySelector('.theme-icon-active use')
-					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
-					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-						element.classList.remove('active')
-					})
-
-					btnToActive.classList.add('active')
-					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-				}
-
-				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-					if (storedTheme !== 'light' || storedTheme !== 'dark') {
-						setTheme(getPreferredTheme())
-					}
-				})
-
-				showActiveTheme(getPreferredTheme())
-
-				document.querySelectorAll('[data-bs-theme-value]')
-					.forEach(toggle => {
-						toggle.addEventListener('click', () => {
-							const theme = toggle.getAttribute('data-bs-theme-value')
-							localStorage.setItem('theme', theme)
-							setTheme(theme)
-							showActiveTheme(theme)
-						})
-					})
-			}
-		})
-
-	</script>
+	
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -199,7 +142,7 @@ Blog detail START -->
 
 			<!-- Image -->
 			<div class="col-lg-10 mx-auto text-center">
-				<img src="assets/images/services/blog/03.jpg" class="img-fluid rounded" alt="blog-img">
+				<img src="assets/images/blog/2.jpg" class="img-fluid rounded" alt="blog-img">
 			</div>
 
 			<!-- Content -->
@@ -235,12 +178,12 @@ Blog detail START -->
 				<div class="row g-4 g-lg-6">
 					<div class="col-sm-6">
 						<a href="assets/images/blog/4by4/04.jpg" data-glightbox data-gallery="image-popup">
-							<img src="assets/images/blog/4by4/08.webp" class="rounded" alt="blog-img">
+							<img src="assets/images/blog/4 (1).jpg" class="rounded" alt="blog-img">
 						</a>
 					</div>
 					<div class="col-sm-6">
 						<a href="assets/images/blog/4by4/06.jpg" data-glightbox data-gallery="image-popup">
-							<img src="assets/images/blog/4by4/08.png" class="rounded" alt="blog-img">
+							<img src="assets/images/blog/6.jpg" class="rounded" alt="blog-img">
 						</a>
 					</div>
 				</div>
@@ -248,109 +191,11 @@ Blog detail START -->
 		</div>
 
 			<!-- List content -->
-			<div class="col-lg-8 mx-auto" style="font-family: 'Calibri', sans-serif;">
+			<div class="col-lg-8 mx-auto" >
 				<!-- <div class="col-lg-8 mx-auto" style="max-width: 800px; margin: 0 auto;"> -->
 				<p>Recognizing early signs of HVAC issues can save you from costly repairs and ensure your home remains comfortable year-round. Your HVAC system is a complex and essential component of your home, responsible for maintaining indoor air quality and regulating temperature. Neglecting the warning signs of a malfunctioning HVAC system can lead to decreased efficiency, higher energy bills, and potential breakdowns. By being aware of these signs and addressing them promptly, you can extend the lifespan of your HVAC system, improve its performance, and maintain a healthy and comfortable living environment. Here are the top signs your HVAC system needs professional attention and the steps to take:</p>
 			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 1: Unusual Noises</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					If you hear banging, clanking, or squealing noises coming from your HVAC system, it could indicate loose or damaged components that need immediate attention.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Identify the source of the noise.</li>
-					<li>Turn off the HVAC system to prevent further damage.</li>
-					<li>Contact a professional technician to inspect and repair the system.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 2: Inconsistent Temperatures</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					If some rooms in your home are significantly hotter or colder than others, it might be a sign of an issue with your HVAC system's distribution or an improperly sized system.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Check for blocked vents or registers in the affected rooms.</li>
-					<li>Ensure your thermostat settings are correct.</li>
-					<li>Have a professional evaluate the system for potential issues with ductwork or sizing.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 3: High Energy Bills</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					An unexpected increase in your energy bills can signal that your HVAC system is working harder than it should be, often due to inefficiencies or malfunctions that need to be addressed.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Compare your energy bills month-to-month and year-to-year.</li>
-					<li>Check for any visible issues with your HVAC system.</li>
-					<li>Schedule a professional inspection to identify and resolve inefficiencies.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 4: Poor Air Quality</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					If you notice more dust, mold, or humidity in your home, it may be a sign that your HVAC system is not properly filtering or circulating the air, which can affect your health and comfort.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Replace air filters regularly to maintain air quality.</li>
-					<li>Check for mold or mildew around your HVAC system and ductwork.</li>
-					<li>Consider installing air purifiers or dehumidifiers to enhance air quality.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 5: Frequent Cycling</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					If your HVAC system is turning on and off more frequently than usual, it may indicate a problem with the thermostat, airflow, or the unit itself. This frequent cycling can wear out the system faster.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Check and replace your thermostat batteries if needed.</li>
-					<li>Ensure that your air filters are clean and not obstructing airflow.</li>
-					<li>Schedule a professional inspection to diagnose and fix the issue.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 6: Leaks and Moisture</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					Any sign of moisture or leaks around your HVAC system can indicate a serious problem, such as a refrigerant leak or a blocked condensate drain, which should be addressed promptly.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Inspect your HVAC system for visible signs of leaks or moisture.</li>
-					<li>Clean and clear the condensate drain line regularly.</li>
-					<li>Contact a professional to repair refrigerant leaks and other issues.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 7: Strange Odors</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					Unpleasant smells emanating from your HVAC system can indicate mold growth, burnt wires, or other issues that could compromise your indoor air quality and system performance.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Identify the type of odor (e.g., musty, burning) to determine the potential cause.</li>
-					<li>Inspect your HVAC system for mold, mildew, or burnt components.</li>
-					<li>Schedule a professional cleaning and maintenance service to resolve the issue.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 8: Weak Airflow</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					If the airflow from your vents seems weak or uneven, it might be due to a clogged filter, ductwork issues, or a failing blower motor. This can lead to inadequate heating or cooling.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Check and replace air filters regularly to ensure proper airflow.</li>
-					<li>Inspect ductwork for leaks, blockages, or damage.</li>
-					<li>Have a professional technician assess and repair the blower motor if needed.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 9: Thermostat Issues</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					Inaccurate temperature readings or a thermostat that doesn’t respond properly can lead to discomfort and inefficient HVAC operation. It might be time to recalibrate or replace your thermostat.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Check thermostat settings and batteries.</li>
-					<li>Calibrate the thermostat to ensure accurate temperature readings.</li>
-					<li>Consider upgrading to a programmable or smart thermostat for better control and efficiency.</li>
-				</ul>
-			
-				<h6 style="font-size: 1.1em; color: var(--bs-body-color); margin-bottom: 15px;">Step 10: Increased Dust</h6>
-				<p style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					An unusual amount of dust accumulating in your home can be a sign that your HVAC system isn’t filtering air effectively, which can affect both the system’s performance and your indoor air quality.
-				</p>
-				<ul style="font-size: 1em; color: var(--bs-body-color); line-height: 1.6; margin-bottom: 20px;">
-					<li>Replace air filters regularly to reduce dust circulation.</li>
-					<li>Clean ducts and vents to remove accumulated dust and debris.</li>
-					<li>Schedule regular HVAC maintenance to ensure all components are clean and functioning properly.</li>
-				</ul>
+				
 			</div>
 				
 	
@@ -358,7 +203,7 @@ Blog detail START -->
 
 			<!-- Image -->
 			<div class="col-lg-10 mx-auto text-center">
-				<img src="assets/images/blog/4by4/09.jpg" class="img-fluid rounded" alt="blog-img">
+				<img src="assets/images/blog/5 (1).jpg" class="img-fluid rounded" alt="blog-img">
 			</div>
 
 			<!-- Quote and actions -->
@@ -608,6 +453,10 @@ Footer END -->
 
 <!-- Back to top -->
 <div class="back-top"></div>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/9097400410" target="_blank" class="whatsapp-button" style="position: fixed; bottom:100px; right:38px; z-index: 1000;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 50px; height: 50px;">
+</a>
 
 <!-- Bootstrap JS -->
 <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
