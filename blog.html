@@ -10,65 +10,7 @@
 	<meta name="author" content="Webestica.com">
 	<meta name="description" content="Technology and Corporate Bootstrap Theme">
 
-	<!-- Dark mode -->
-	<script>
-		const storedTheme = localStorage.getItem('theme')
-
-		const getPreferredTheme = () => {
-			if (storedTheme) {
-				return storedTheme
-			}
-			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-		}
-
-		const setTheme = function (theme) {
-			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.setAttribute('data-bs-theme', 'dark')
-			} else {
-				document.documentElement.setAttribute('data-bs-theme', theme)
-			}
-		}
-
-		setTheme(getPreferredTheme())
-
-		window.addEventListener('DOMContentLoaded', () => {
-			var el = document.querySelector('.theme-icon-active');
-			if (el != 'undefined' && el != null) {
-				const showActiveTheme = theme => {
-					const activeThemeIcon = document.querySelector('.theme-icon-active use')
-					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
-
-					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-						element.classList.remove('active')
-					})
-
-					btnToActive.classList.add('active')
-					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-				}
-
-				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-					if (storedTheme !== 'light' || storedTheme !== 'dark') {
-						setTheme(getPreferredTheme())
-					}
-				})
-
-				showActiveTheme(getPreferredTheme())
-
-				document.querySelectorAll('[data-bs-theme-value]')
-					.forEach(toggle => {
-						toggle.addEventListener('click', () => {
-							const theme = toggle.getAttribute('data-bs-theme-value')
-							localStorage.setItem('theme', theme)
-							setTheme(theme)
-							showActiveTheme(theme)
-						})
-					})
-			}
-		})
-
-	</script>
-
+	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -182,7 +124,7 @@ Main Banner START -->
 				<!-- Slider item -->
 				<div class="swiper-slide">
 					<!-- Card item START -->
-					<div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url(assets/images/services/blog/Tumbnail.png); background-position: center left; background-size: cover;">
+					<div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url(assets/images/services/blog/Tumbnail.jpg); background-position: center left; background-size: cover;">
 						<!-- Background dark overlay -->
 						<div class="bg-overlay bg-dark opacity-5"></div>
 						<!-- Card image overlay -->
